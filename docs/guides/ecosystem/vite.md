@@ -1,9 +1,10 @@
+```markdown
 ---
-name: Build a frontend using Vite and Bun
+name: Build a frontend using Vite and Bun 1.0
 ---
 
 {% callout %}
-While Vite currently works with Bun, it has not been heavily optimized, nor has Vite been adapted to use Bun's bundler, module resolver, or transpiler.
+While Vite currently works with Bun, it has not been heavily optimized, nor has Vite been adapted to use Bun's bundler, module resolver, or transpiler. However, with the release of Bun 1.0, there have been significant improvements and optimizations.
 {% /callout %}
 
 ---
@@ -30,10 +31,8 @@ bun install
 
 Start the development server with the `vite` CLI using `bunx`.
 
-The `--bun` flag tells Bun to run Vite's CLI using `bun` instead of `node`; by default Bun respects Vite's `#!/usr/bin/env node` [shebang line](<https://en.wikipedia.org/wiki/Shebang_(Unix)>). After Bun 1.0 this flag will no longer be necessary.
-
 ```bash
-bunx --bun vite
+bunx vite
 ```
 
 ---
@@ -43,7 +42,7 @@ To simplify this command, update the `"dev"` script in `package.json` to the fol
 ```json-diff#package.json
   "scripts": {
 -   "dev": "vite",
-+   "dev": "bunx --bun vite",
++   "dev": "bunx vite",
     "build": "vite build",
     "serve": "vite preview"
   },
@@ -63,9 +62,10 @@ bun run dev
 The following command will build your app for production.
 
 ```sh
-$ bunx --bun vite build
+$ bunx vite build
 ```
 
 ---
 
-This is a stripped down guide to get you started with Vite + Bun. For more information, see the [Vite documentation](https://vitejs.dev/guide/).
+This is a streamlined guide to help you get started with Vite + Bun 1.0. For more information, see the [Vite documentation](https://vitejs.dev/guide/).
+```
